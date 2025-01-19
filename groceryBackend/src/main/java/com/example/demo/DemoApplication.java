@@ -18,9 +18,9 @@ public class DemoApplication {
 	public static void main(String[] args) {SpringApplication.run(DemoApplication.class, args);
 	}
 
-	@GetMapping("/users")
-	public List<Student> getUsers(){
-		return List.of(new Student("Carter Johns" , "Cartermjohns@outlook.com", 1, LocalDate.of(2005,11,28) ));
+	@GetMapping("/test")
+	public String getUsers(){
+		return "working";
 	}
 
 }

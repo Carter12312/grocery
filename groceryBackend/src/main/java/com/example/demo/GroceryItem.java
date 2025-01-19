@@ -1,10 +1,10 @@
 package com.example.demo;
 
 import com.example.demo.Review.Review;
-import jakarta.persistence.Entity;
+//import jakarta.persistence.Entity;
 
 import java.util.List;
-@Entity
+//@Entity
 public class GroceryItem {
     private String name;
     private String brand;

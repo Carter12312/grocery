@@ -2,8 +2,8 @@ package com.example.demo.Review;
 
 
 import com.example.demo.GroceryItem;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+//import jakarta.persistence.JoinColumn;
+//import jakarta.persistence.ManyToOne;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -17,8 +17,8 @@ public class Review {
     private LocalDateTime publishedDate;
     private String author;
     private int rating;
-    @ManyToOne
-    @JoinColumn(name = "grocery_item_id")
+//    @ManyToOne
+//    @JoinColumn(name = "grocery_item_id")
     private GroceryItem groceryItem;
 
     public Review(String title, String body, LocalDateTime publishedDate, String author, int rating, GroceryItem groceryItem) {
