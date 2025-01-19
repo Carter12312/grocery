@@ -1,6 +1,12 @@
-package com.example.demo;
+package com.example.demo.Review;
 
 
+import com.example.demo.GroceryItem;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 public class Review {
@@ -8,17 +14,20 @@ public class Review {
     private Long id;
     private String title;
     private String body;
-    private Date publishedDate;
+    private LocalDateTime publishedDate;
     private String author;
     private int rating;
+    @ManyToOne
+    @JoinColumn(name = "grocery_item_id")
+    private GroceryItem groceryItem;
 
-    public Review(Long id, String title, String body, Date publishedDate, String author, int rating) {
-        this.id = id;
+    public Review(String title, String body, Date publishedDate, String author, int rating, GroceryItem groceryItem) {
         this.title = title;
         this.body = body;
         this.publishedDate = publishedDate;
         this.author = author;
         this.rating = rating;
+        this.groceryItem = groceryItem;
     }
 
     public Long getId() {

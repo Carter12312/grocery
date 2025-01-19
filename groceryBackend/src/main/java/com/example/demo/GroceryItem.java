@@ -1,7 +1,10 @@
 package com.example.demo;
 
-import java.util.List;
+import com.example.demo.Review.Review;
+import jakarta.persistence.Entity;
 
+import java.util.List;
+@Entity
 public class GroceryItem {
     private String name;
     private String brand;
@@ -15,6 +18,9 @@ public class GroceryItem {
         Id = id;
         this.reviews = reviews;
         this.avrgRating = avrgRating;
+    }
+
+    public GroceryItem() {
     }
 
     public String getName() {
