@@ -15,6 +15,6 @@ import java.time.LocalDateTime;
 public class ReviewController {
     @GetMapping("getOne/{reviewId}")
     Review singleReview(@PathVariable Long reviewId){
-        return new Review("test", "i hate this app", LocalDateTime.of(2024,11,2, 12,22), "Carter johns", 4, new GroceryItem())
+        return new Review("test", "i hate this app", LocalDateTime.of(2024,11,2, 12,22), "Carter johns", 4, new GroceryItem());
     }
 }

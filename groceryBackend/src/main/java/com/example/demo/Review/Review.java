@@ -21,7 +21,7 @@ public class Review {
     @JoinColumn(name = "grocery_item_id")
     private GroceryItem groceryItem;
 
-    public Review(String title, String body, Date publishedDate, String author, int rating, GroceryItem groceryItem) {
+    public Review(String title, String body, LocalDateTime publishedDate, String author, int rating, GroceryItem groceryItem) {
         this.title = title;
         this.body = body;
         this.publishedDate = publishedDate;
@@ -54,11 +54,11 @@ public class Review {
         this.body = body;
     }
 
-    public Date getPublishedDate() {
+    public LocalDateTime getPublishedDate() {
         return publishedDate;
     }
 
-    public void setPublishedDate(Date publishedDate) {
+    public void setPublishedDate(LocalDateTime publishedDate) {
         this.publishedDate = publishedDate;
     }
 
